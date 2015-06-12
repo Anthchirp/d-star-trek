@@ -136,6 +136,7 @@ ALL	   =	dtfind dtpixhist dtindex dtrefine dtpredict dtstrategy dtmultistrategy 
 LIBS	   =  $(ANL_LDFLAGS) -ldtrekX$(OSTYPE) -lxerces-c \
              -L/usr/X11R6/lib -lXt -lX11 -lm -lcrypt -ldl \
              -lptypes -lcbf \
+             -L../DTDISPLAY \
              -L../xerces-c/src/.libs -L../CBF/lib -L../ptypes/lib
 
 RANLIB = /bin/true
