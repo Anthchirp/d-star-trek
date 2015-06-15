@@ -56,7 +56,7 @@ INSTALLDIR      = ../../bin_linux
 #GINCLUDEDIR     =  -I/usr/X11R6/LessTif/Motif2.1/include
 GINCLUDEDIR     =  -I/usr/X11R6/include
 #GINCLUDEDIR     = /usr/local/lib/g++-include
-C++FLAGS        = $(OPTLEV) -I$(DTREKINCLUDEDIR) $(GINCLUDEDIR) -L$(DTREKLIBDIR) -L../CBF -DFUNCPROTO -DXTFUNCPROTO ###########-DUSE_OLD_ERROR_BITS
+C++FLAGS        = $(OPTLEV) -I$(DTREKINCLUDEDIR) $(GINCLUDEDIR) -L$(DTREKLIBDIR) -L../CBF/lib -DFUNCPROTO -DXTFUNCPROTO ###########-DUSE_OLD_ERROR_BITS
 SLIBS=  -lXm -lXmu -lXp -lXt -lSM -lICE -lXext -lX11 -ldl
 LIBS            = -ldtrek$(OSTYPE) -L. -L/usr/X11R6/lib $(SLIBS) -lm -lcrypt -lcbf
 
