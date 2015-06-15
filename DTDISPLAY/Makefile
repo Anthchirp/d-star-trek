@@ -73,7 +73,9 @@ RM  = rm -f
 LIBOBJS		= CXdisplay.o CXcolormap.o CXrubberband.o CXhelp.o CXcursor.o \
 		  CXprop.o
 
-all: dtdisplay gifs
+all: dtdisplay 
+# gifs
+#  files are missing for this build step
 
 dtdisplay: $(OFILES)
 	$(CC) $(C++FLAGS) $(OFILES) $(LIBS) -o dtdisplay
@@ -153,23 +155,23 @@ CXcursor.o:	 CXcursor.cc CXcursor.h
 libdtrekX$(OSTYPE).a:	$(LIBOBJS)
 		$(AR) -rv $@ $^
 
-EditImageView.gif:	EditImageView.UU	
-	uudecode $^
-
-EditReflnView.gif:	EditReflnView.UU
-	uudecode $^
-
-Example.gif:		Example.UU
-	uudecode $^
-
-FileTemplate.gif:	FileTemplate.UU
-	uudecode $^
-
-ColorScale.gif:		ColorScale.UU
-	uudecode $^
-
-gifs:	EditImageView.gif EditReflnView.gif Example.gif FileTemplate.gif \
-	ColorScale.UU
+#EditImageView.gif:	EditImageView.UU	
+#	uudecode $^
+#
+#EditReflnView.gif:	EditReflnView.UU
+#	uudecode $^
+#
+#Example.gif:		Example.UU
+#	uudecode $^
+#
+#FileTemplate.gif:	FileTemplate.UU
+#	uudecode $^
+#
+#ColorScale.gif:		ColorScale.UU
+#	uudecode $^
+#
+#gifs:	EditImageView.gif EditReflnView.gif Example.gif FileTemplate.gif \
+#	ColorScale.UU
 
 ocodecenter:: 
 	#load $(C++FLAGS) $(OFILES) $(LIBS)
